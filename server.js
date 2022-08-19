@@ -5,7 +5,7 @@ const postRouter = require('./app/routes/postRouter');
 const dotenv = require('dotenv');
 dotenv.config();
 const app = express();
-
+const PORT = 3001;
 const corsOptions = {
   origin: 'http://localhost:3000',
 };
@@ -27,7 +27,6 @@ app.get('/', (req, res) => {
 app.use(userRouter);
 app.use(postRouter);
 
-const PORT = 3001;
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
