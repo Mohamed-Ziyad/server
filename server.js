@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 app.use(userRouter);
 app.use(postRouter);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+const PORT = 3001;
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
