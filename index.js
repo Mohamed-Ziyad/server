@@ -3,8 +3,8 @@ const cors = require('cors');
 const userRouter = require('./app/routes/userRouter');
 const postRouter = require('./app/routes/postRouter');
 const dotenv = require('dotenv');
-dotenv.config();
 const app = express();
+dotenv.config();
 const PORT = process.env.PORT || 3001;
 const corsOptions = {
   origin: 'http://localhost:3000',
